@@ -1,11 +1,15 @@
-# 🐳 Dự án Docker cơ bản – Ubuntu + Curl
+# docker-test
 
-## 🧾 Mô tả
-Dự án này tạo một Docker image dựa trên Ubuntu, có sẵn công cụ `curl` để thực hiện các lệnh HTTP từ terminal.
+Dự án mẫu học Docker trên macOS.
 
-## 🧱 Cấu trúc Dockerfile
+## Cách sử dụng
 
-```dockerfile
-FROM ubuntu:latest
-RUN apt update && apt install -y curl
-CMD ["bash"]
+```bash
+# Build image
+docker build -t myubuntu .
+
+# Chạy container từ image
+docker run -it myubuntu
+
+# Kiểm tra curl
+curl https://example.com
